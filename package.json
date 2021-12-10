@@ -8,20 +8,29 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "cdk deploy --outputs-file outputs.json",
+    "generate-load": "node -r esbuild-register ./generate-load.ts"
   },
   "devDependencies": {
     "@types/jest": "^26.0.10",
+    "@types/lodash": "^4.14.178",
     "@types/node": "10.17.27",
+    "aws-cdk": "2.1.0",
+    "esbuild": "^0.14.2",
+    "esbuild-register": "^3.2.0",
     "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
-    "aws-cdk": "2.1.0",
     "ts-node": "^9.0.0",
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-sdk/client-sqs": "^3.43.0",
+    "@types/aws-lambda": "^8.10.86",
     "aws-cdk-lib": "2.1.0",
     "constructs": "^10.0.0",
+    "cuid": "^2.1.8",
+    "lodash": "^4.17.21",
     "source-map-support": "^0.5.16"
   }
 }
